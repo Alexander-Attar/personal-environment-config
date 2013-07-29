@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/usr/local/var/postgres'
+let g:netrw_dirhist_2='/Users/Alexander/Development/imagegrabber/app/.git'
+let g:netrw_dirhist_3='/Users/Alexander/.vim'
+let g:netrw_dirhist_4='/Users/Alexander/Development/Songtrust/Songtrust-Publishing/requirements'
