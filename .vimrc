@@ -10,19 +10,19 @@ endfunction
 vmap <C-C> "+y
 set clipboard+=unnamed
 
-" show line number and column number
+"show line number and column number
 set ruler
 
-" for searches
+"for searches
 set ignorecase
 
-" F8 to turn on block paste mode
+"F8 to turn on block paste mode
 set pastetoggle=<F8>
 
-" make backspace work like most other apps
+"make backspace work like most other apps
 set backspace=2
 
-" double hit j to enter control mode
+"double hit j to enter control mode
 inoremap jj <esc>
 
 set smartindent
@@ -49,7 +49,7 @@ autocmd Filetype json set syntax=javascript
 
 call pathogen#infect()
 
-" Nerd Tree
+"Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
 
 "Show hidden files in NerdTree
@@ -57,8 +57,8 @@ let NERDTreeShowHidden=1
 
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
 
-" Close all open buffers on entering a window if the only
-" buffer that's left is the NERDTree buffer
+"Close all open buffers on entering a window if the only
+"buffer that's left is the NERDTree buffer
 function! s:CloseIfOnlyNerdTreeLeft()
   if exists("t:NERDTreeBufName")
     if bufwinnr(t:NERDTreeBufName) != -1
@@ -70,4 +70,3 @@ function! s:CloseIfOnlyNerdTreeLeft()
 endfunction
 
 let NERDTreeQuitOnOpen = 1
-
