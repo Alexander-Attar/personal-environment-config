@@ -10,23 +10,32 @@ endfunction
 vmap <C-C> "+y
 set clipboard+=unnamed
 
-set ruler " show line number and column number
-set ignorecase " for searches
-set pastetoggle=<F8> " F8 to turn on block paste mode
-set backspace=2 " make backspace work like most other apps
-inoremap jj <esc> " double hit j to enter control mode
+" show line number and column number
+set ruler
+
+" for searches
+set ignorecase
+
+" F8 to turn on block paste mode
+set pastetoggle=<F8>
+
+" make backspace work like most other apps
+set backspace=2
+
+" double hit j to enter control mode
+inoremap jj <esc>
+
 set smartindent
 set smarttab
 set tabstop=4
 set shiftwidth=4
 set expandtab
 
-
 set formatoptions=l
 set lbr
 if has("mouse")
     set mouse=a
-endif 
+endif
 set ttymouse=xterm2
 
 set noswapfile
