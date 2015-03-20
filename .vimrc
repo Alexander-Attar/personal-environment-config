@@ -53,20 +53,8 @@ call pathogen#infect()
 map <C-n> :NERDTreeToggle<CR>
 
 "Show hidden files in NerdTree
-let NERDTreeShowHidden=1
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
-
-"Close all open buffers on entering a window if the only
-"buffer that's left is the NERDTree buffer
-function! s:CloseIfOnlyNerdTreeLeft()
-  if exists("t:NERDTreeBufName")
-    if bufwinnr(t:NERDTreeBufName) != -1
-      if winnr("$") == 1
-        q
-      endif
-    endif
-  endif
-endfunction
-
-let NERDTreeQuitOnOpen = 1
+set background=dark
